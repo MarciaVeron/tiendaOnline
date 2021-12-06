@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#bla"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styls.css"/>
+    <title>Carrito Javascript</title>
+  </head>
+  <body>
+
+<!-- Header -->
+    <header class="container-fluid bg-dark position-sticky top-0">
+        <img src="./multimedia/ice-cream(2).png" alt="" width="30" height="24">
+      <ul class="nav nav-pills mb-3 py-3 container" id="pills-tab" role="tablist">
+        <li class="nav-item text-primary" role="presentation">
+          <a class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</a>
+        </li>
+      </ul>
+    </header>
+
+<!-- Wave -->
+    <section id="intro">
+        <div class="wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C117.09,178.12 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: white;"></path></svg>
+        </div>
+        <h1 class="intro__titulo">Heladeria Italia</h1>
+    </section>
+
+<!--Container  -->
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="six columns">
+            <div class="contenido-container">
+              <h2>Prueba un helado</h2>
+              <p>2x1 en cassatta</p>
+              <form>
+                <input class="u-full-width" type="text" placeholder="¿Que te gustaria probar?" id="buscador">
+                <input type="submit" class="submit-buscador">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Barra -->
+    <div class="barra">
+      <div class="container">
+        <div class="three-columns icono icono1">
+          <p>Novedades <br> 
+          Nuevos sabores de verano
+          </p>
+          <p>100% helados naturales <br>
+          Prueba nuestras nuevas combinaciones
+          </p>
+          <p>Helados Veganos!!! <br>
+          Prueba nuestros NUEVOS sabores
+          </p>
+        </div>
+      </div>
+    </div>
+
+<!-- Alert -->
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+    Producto Añadido!
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+    Producto removido!
+    </div>
+
+<!-- Cards -->
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+       1
+      </div>
+        <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <h2 class="h2 m-4 ">Productos en Linea</h2>
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Cassatta</h5>
+              <img src="./multimedia/cassatta.jpg" class="card-img-top" alt="vacito de 140cc con sabor a frutilla y dulce de leche">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">frutilla con dulce de leche, decorada con salsa de chocolate y lluvia de mani</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 150</span></h5>
+                <div class="d-grid gap-2">
+                <button class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Cassatta</h5>
+              <img src="./multimedia/cassatta2.jpg" class="card-img-top" alt="vacito de 140cc con sabor a chocolate y americana">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">chocolate con dulce de leche, decorada con salsa de chocolate y lluvia de mani</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 150</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Torta</h5>
+              <img src="./multimedia/torta.jpg" class="card-img-top" alt="torta de frutilla a la crema con americana, decorada con salsa de chocolate y trocitos de bonbon">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">frutilla a la crema con americana, decorada con salsa de chocolate y trocitos de bonbones</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 650</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Torta</h5>
+              <img src="./multimedia/torta2.jpg" class="card-img-top" alt="torta de crema de chocolate con dulce de leche, decorada con salsa de chocolate y trocitos de bonbon">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">crema de chocolate con dulce de leche, decorada con salsa de chocolate y trocitos de bonbones</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 650</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">1 kilo de Helado</h5>
+              <img src="./multimedia/kilo.jpg" class="card-img-top" alt="helado en tregolpor por un kilo">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">4 sabores a eleccion por kilo</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 600</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">1/2 k de Helado</h5>
+              <img src="./multimedia/medio.jpg" class="card-img-top" alt="helado en tregolpor por medio kilo">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">3 sabores a eleccion por medio</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 350</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">1/4 k de Helado</h5>
+              <img src="./multimedia/cuarto.jpg" class="card-img-top" alt="helado en tregolpor por un cuarto">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">2 sabores a eleccion por cuarto</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 200</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">PaliFrut</h5>
+              <img src="./multimedia/Palifrut.jpg" class="card-img-top" alt="helado frutales de agua">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Sabores: Anana- Naranja- Banana- Frambuesa- Frutilla</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 30</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">PaliCrem</h5>
+              <img src="./multimedia/crema.jpg" class="card-img-top" alt="helados de crema">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Sabores: crema de dulce de leche- crema de vainilla- crema de frutilla- crema de cielo</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 40</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">PaliBon</h5>
+              <img src="./multimedia/palibon.jpg" class="card-img-top" alt="helado bon bon">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Sabores: chocolate bañado en chocolate- dulce de leche bañado en chocolate- crema chantilly bañada en chocolate </p>
+                <h5 class="text-light">Precio: <span class="precio">$ 80</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">PaliTurbo</h5>
+              <img src="./multimedia/helado_agua.jpg" class="card-img-top" alt="helados de crema">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">Sabores: frutilla- uva- limon- frambuesa- maracuya</p>
+                <h5 class="text-light">Precio: <span class="precio">$ 60</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!-- Carrito -->
+      <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <br>
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr class="text-light">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+              
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-dark">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-primary">COMPRAR</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark p-3 mt-5">
+      <p class="text-center m-0 text-muted">Todos los derechos reservados &copy;</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
